@@ -42,9 +42,6 @@ const Portfolio = () => {
                     <div className="info">
                       <div className="title">{project.title}</div>
                       <div className="category">{project.category}</div>
-                      {/* <div className="icon">
-                        <FaPlusSquare onClick={() => expandModal(project)} />
-                      </div> */}
                     </div>
                   </div>
                 </div>
