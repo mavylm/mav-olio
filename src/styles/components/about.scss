@@ -41,13 +41,14 @@
     grid-column: span 12;
     padding: 0.5%;
     align-self: flex-start;
+    .about-img {
+      display: none;
+    }
     h1 {
       letter-spacing: 5px;
       font-size: 14px;
       text-align: center;
-    }
-    .bio {
-      display: none;
+      margin-top: 25px;
     }
     .skills-grid {
       grid-gap: 5px;
@@ -66,9 +67,7 @@
 @media screen and (max-width: 1500px) {
   .about-text {
     .each-text {
-      font-size: 14px;
-      line-height: 18px;
-      margin: 0 30px 0 10px;
+      display: none;
     }
   }
 }

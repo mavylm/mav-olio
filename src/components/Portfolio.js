@@ -39,13 +39,13 @@ const Portfolio = () => {
               {projects.map((project) => (
                 <div className="img-container">
                   <img src={project.image} alt="Design" className="image" />
-                  <div className="overlay">
+                  <div className="overlay" onClick={() => expandModal(project)}>
                     <div className="info">
                       <div className="title">{project.title}</div>
                       <div className="category">{project.category}</div>
-                      <div className="icon">
+                      {/* <div className="icon">
                         <FaPlusSquare onClick={() => expandModal(project)} />
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -82,7 +82,7 @@ const Portfolio = () => {
                           target="_blank"
                           rel="noreferrer"
                         >
-                          <FaGithub />
+                          <FaGithub size={"2em"} />
                         </a>
                       </span>
                       <span className="icon">
@@ -91,7 +91,7 @@ const Portfolio = () => {
                           target="_blank"
                           rel="noreferrer"
                         >
-                          <FaExternalLinkSquareAlt />
+                          <FaExternalLinkSquareAlt size={"2em"} />
                         </a>
                       </span>
                     </div>

@@ -29,7 +29,7 @@ const About = () => {
         <div className="about">
           <div className="about-text">
             <Fade top>
-              <img src={mavy} alt="Mavy" />
+              <img src={mavy} alt="Mavy" className="about-img" />
             </Fade>
             <Fade left>
               <div className="bio">
