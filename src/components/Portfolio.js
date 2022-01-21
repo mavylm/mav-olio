@@ -2,7 +2,6 @@ import { React, useState } from "react";
 import {
   FaPencilAlt,
   FaCode,
-  FaPlusSquare,
   FaGithub,
   FaExternalLinkSquareAlt,
 } from "react-icons/fa";
