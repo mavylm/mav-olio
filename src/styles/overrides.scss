@@ -1,0 +1,66 @@
+@import "./variables.scss";
+
+#fp-nav {
+  ul {
+    li {
+      a.active {
+        span {
+          height: 3px !important;
+          width: 40px !important;
+          margin: -5px 0 0 -20px !important;
+          border-radius: 0% !important;
+          background-color: $color-one !important;
+        }
+      }
+      &:hover {
+        span {
+          width: 40px !important;
+          height: 3px !important;
+          margin: -5px 20px 0 -20px !important;
+          background-color: $color-two !important;
+        }
+      }
+      a {
+        span {
+          z-index: 1;
+          height: 3px !important;
+          width: 30px !important;
+          border-radius: 0% !important;
+          margin: -5px 0 0 -10px !important;
+          background-color: $color-grey !important;
+        }
+      }
+    }
+  }
+}
+
+.fp-controlArrow.fp-prev {
+  left: 120px !important;
+}
+.fp-controlArrow.fp-next {
+  right: 120px !important;
+}
+
+@media screen and (max-width: 840px) {
+  #fp-nav {
+    display: none;
+  }
+  .fp-controlArrow.fp-prev {
+    left: 8px !important;
+  }
+  .fp-controlArrow.fp-next {
+    right: 8px !important;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  #fp-nav {
+    display: none;
+  }
+  .fp-controlArrow.fp-prev {
+    left: 50px !important;
+  }
+  .fp-controlArrow.fp-next {
+    right: 50px !important;
+  }
+}

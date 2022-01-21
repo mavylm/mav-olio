@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import Nav from "./components/Nav.js";
+import Main from "./components/Main.js";
+import About from "./components/About.js";
+import Portfolio from "./components/Portfolio.js";
+import Contact from "./components/Contact.js";
+import Footer from "./components/Footer.js";
+import ReactFullpage from "@fullpage/react-fullpage";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const anchors = ["Main", "About", "Portfolio", "Contact"];
+
+const App = () => (
+  <>
+    <Nav />
+    <Footer />
+    <ReactFullpage
+      scrollingSpeed={1000}
+      loopTop={true}
+      loopBottom={true}
+      anchors={anchors}
+      navigation
+      navigationPosition={"right"}
+      scrollOverflow={true}
+      render={({ state, fullpageApi }) => {
+        return (
+          <ReactFullpage.Wrapper>
+            <div className="section">
+              <Main />
+            </div>
+            <div className="section">
+              <About />
+            </div>
+            <div className="section">
+              <Portfolio />
+            </div>
+            <div className="section">
+              <Contact />
+            </div>
+          </ReactFullpage.Wrapper>
+        );
+      }}
+    />
+  </>
+);
 
 export default App;

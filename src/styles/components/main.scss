@@ -1,0 +1,62 @@
+@import "../variables.scss";
+
+.content-title {
+  h2 {
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    color: $color-white;
+    margin-bottom: 30px;
+  }
+  .slash {
+    color: $color-one;
+    text-shadow: -1px 0 $color-two;
+  }
+  .slash2 {
+    color: $color-two;
+    text-shadow: -1px 0 $color-one;
+  }
+}
+
+.content-subtitle {
+  h4 {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: $color-grey;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    &:before {
+      content: "";
+      position: absolute;
+      right: -70px;
+      top: 9px;
+      width: 65px;
+      height: 1px;
+      background: $color-grey;
+      transition: all 0.3s;
+    }
+  }
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 840px) {
+  .content-title {
+    h2 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+  }
+  .content-subtitle {
+    h4 {
+      font-size: 10px;
+      letter-spacing: 5px;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}

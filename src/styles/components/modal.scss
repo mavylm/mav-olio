@@ -1,0 +1,91 @@
+@import "../variables.scss";
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+  z-index: 200;
+}
+
+.modal.enter-done {
+  opacity: 1;
+  pointer-events: visible;
+  .modal-content {
+    transform: translateY(0);
+  }
+}
+
+.modal.exit {
+  opacity: 0;
+  .modal-content {
+    transform: translateY(-200px);
+  }
+}
+
+.modal-content {
+  width: auto;
+  background-color: $color-white;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-200px);
+  text-align: center;
+  .modal-desc {
+    margin-top: 5px;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  h2 {
+    color: $color-black;
+  }
+}
+
+.button {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  color: $color-one;
+  background-color: $color-white;
+  border-radius: 50%;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+@media screen and (max-width: 840px) {
+  .modal {
+    .modal-content {
+      width: 90%;
+      .modal-desc {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .modal {
+    .modal-content {
+      width: 60%;
+      .modal-desc {
+        margin-top: 5px;
+      }
+    }
+  }
+}

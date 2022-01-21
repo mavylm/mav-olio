@@ -1,0 +1,74 @@
+.about {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.about-text {
+  grid-column: span 6;
+  padding: 10%;
+  align-self: flex-end;
+  h1 {
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+  .bio {
+    display: block;
+  }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .each-text {
+    margin: 0 40px 0 10px;
+    font-size: 18px;
+  }
+  .each-skill {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 25px;
+    opacity: 0.6;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .about-text {
+    grid-column: span 12;
+    padding: 0.5%;
+    align-self: flex-start;
+    h1 {
+      letter-spacing: 5px;
+      font-size: 14px;
+      text-align: center;
+    }
+    .bio {
+      display: none;
+    }
+    .skills-grid {
+      grid-gap: 5px;
+    }
+    .each-text {
+      display: none;
+    }
+    .each-skill {
+      display: flex;
+      justify-self: center;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .about-text {
+    .each-text {
+      font-size: 14px;
+      line-height: 18px;
+      margin: 0 30px 0 10px;
+    }
+  }
+}
