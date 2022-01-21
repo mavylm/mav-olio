@@ -10,20 +10,12 @@ const Modal = (props) => {
     }
   };
 
-  // let images = props.map(function (image) {
-  //   return (
-  //     <div className="slide">
-  //       <img src={image} alt={image} />
-  //     </div>
-  //   );
-  // });
-
   useEffect(() => {
     document.body.addEventListener("keydown", closeOnEscapeKeyDown);
     return function cleanup() {
       document.body.removeEventListener("keydown", closeOnEscapeKeyDown);
     };
-  }, []);
+  });
 
   return ReactDOM.createPortal(
     <CSSTransition
