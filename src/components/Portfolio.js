@@ -37,7 +37,12 @@ const Portfolio = () => {
             <div className="container">
               {projects.map((project) => (
                 <div className="img-container">
-                  <img src={project.image} alt="Design" className="image" />
+                  <img
+                    src={project.image}
+                    alt="Design"
+                    className="image"
+                    onClick={() => expandModal(project)}
+                  />
                   <div className="overlay" onClick={() => expandModal(project)}>
                     <div className="info">
                       <div className="title">{project.title}</div>
@@ -68,7 +73,7 @@ const Portfolio = () => {
               {coding.map((project) => (
                 <div className="img-container">
                   <img src={project.image} alt="Coding" className="image" />
-                  <div className="overlay">
+                  <div className="coding-overlay">
                     <div className="info">
                       <div className="title">{project.title}</div>
                       <div className="category">{project.category}</div>
