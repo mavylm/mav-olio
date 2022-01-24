@@ -10,6 +10,9 @@ import {
   FaJava,
   FaGitAlt,
 } from "react-icons/fa";
+import { DiScrum } from "react-icons/di";
+import { SiJira } from "react-icons/si";
+import { IoLogoBitbucket } from "react-icons/io";
 import Ae from "../img/Ae.svg";
 import Ai from "../img/Ai.svg";
 import Pr from "../img/Pr.svg";
@@ -104,6 +107,21 @@ const About = () => {
                   <div class="each-skill">
                     <img src={mysql} alt="MySQL" width="45px" />
                     <span class="each-text">MySQL</span>
+                  </div>
+                </div>
+
+                <div class="skills-grid">
+                  <div class="each-skill">
+                    <DiScrum size="3em" />
+                    <span class="each-text">Agile/Scrum</span>
+                  </div>
+                  <div class="each-skill">
+                    <SiJira size="3em" />
+                    <span class="each-text">Jira</span>
+                  </div>
+                  <div class="each-skill">
+                    <IoLogoBitbucket size="3em" />
+                    <span class="each-text">BitBucket</span>
                   </div>
                 </div>
 
