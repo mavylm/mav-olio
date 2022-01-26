@@ -10,7 +10,6 @@ const Main = () => {
             <div className="glitch" data-text="MAVIS LIM">
               MAVIS LIM
             </div>
-            <div className="glow">MAVIS LIM</div>
             <p className="subtitle">based in Singapore</p>
           </div>
 
