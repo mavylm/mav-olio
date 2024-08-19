@@ -28,7 +28,7 @@ const Contact = () => {
                 <li>
                   <a
                     href='https://discord.com/app'
-                    title='mavy#3799'
+                    title='azukera'
                     target='_blank'
                     rel='noreferrer'
                   >
